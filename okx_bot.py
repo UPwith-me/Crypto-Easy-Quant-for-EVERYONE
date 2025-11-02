@@ -1023,11 +1023,8 @@ class App(ctk.CTk):
         self.set_ui_state(is_scanning=True)
         self.log_queue = queue.Queue()
     
-        # ▼▼▼【核心修改】▼▼▼
-        # 将翻译函数作为最后一个参数添加到*args中
         all_args = args + (self.translator.get,)
         threading.Thread(target=target_func, args=all_args, daemon=True).start()
-        # ▲▲▲【核心修改】▲▲▲
     
         self.after(100, self.check_queue)
     def start_scan(self):
@@ -1079,24 +1076,19 @@ class App(ctk.CTk):
             return
         
         self.set_ui_state(is_running=True)
-        # 在这里，我们不再硬编码日志消息，而是让后台线程自己记录启动日志
     
         capital, mode = Decimal(self.entry_capital.get()), self.mode_selector.get()
         self.log_queue, self.status_queue, self.stop_event = queue.Queue(), queue.Queue(), threading.Event()
     
-        # ▼▼▼【核心修改】▼▼▼
         # 获取翻译函数本身，以便传递给线程
         translator_func = self.translator.get
     
         threading.Thread(target=self.start_threads, args=(capital, mode, translator_func), daemon=True).start()
-        # ▲▲▲【核心修改】▲▲▲
     
         self.after(100, self.check_queue)
     def start_threads(self, capital, mode, translator_func): # <-- 添加新参数
-        # ▼▼▼【核心修改】▼▼▼
         self.guardian_thread = threading.Thread(target=guardian_loop, args=(self.log_queue, self.stop_event, self.status_queue, translator_func), daemon=True)
         self.bot_thread = threading.Thread(target=main_trading_loop, args=(self.log_queue, self.stop_event, capital, mode, self.status_queue, translator_func), daemon=True)
-        # ▲▲▲【核心修改】▲▲▲
     
         self.guardian_thread.start()
         self.bot_thread.start()
@@ -1273,4 +1265,5 @@ if __name__ == '__main__':
         app = App()
         app.mainloop()
     except Exception as e:
+
         traceback.print_exc()
