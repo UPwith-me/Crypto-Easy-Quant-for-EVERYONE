@@ -21,7 +21,6 @@
   <img src="https://github.com/user-attachments/assets/a71ae6e8-4795-40fc-8f3e-4accdc8cb333" alt="Bot Demo GIF" width="800">
   <br>
   <br>
-  <em>(Highly Recommended: Replace the link above with a GIF demonstrating the bot in action. A dynamic demo is worth a thousand words!)</em>
 </p>
 
 <div align="center">
@@ -130,3 +129,4 @@ This project is for educational purposes. Cryptocurrency trading involves signif
 </details>
 
 </div>
+
