@@ -81,7 +81,7 @@ This bot is a powerful tool in its current state, but it's important to understa
 ---
 
 ## Installation & Setup
-1.  **Clone the Repository**: `git clone https://github.com/YourUsername/YourRepoName.git`
+1.  **Clone the Repository**: `git clone https://github.com/UPwith-me/Orion-Trader.git`
 2.  **Navigate & Create Venv**: `cd YourRepoName` and `python -m venv venv`
 3.  **Activate & Install**: Activate the virtual environment and run `pip install -r requirements.txt`
 4.  **Configure API**: Copy `.env.example` to `.env` and fill in your OKX API keys.
@@ -149,7 +149,7 @@ This project is for educational purposes. Cryptocurrency trading involves signif
 ---
 
 ## 安装与配置
-1.  **克隆仓库**: `git clone https://github.com/YourUsername/YourRepoName.git`
+1.  **克隆仓库**: `git clone https://github.com/UPwith-me/Orion-Trader.git`
 2.  **进入目录并创建虚拟环境**: `cd YourRepoName` 然后 `python -m venv venv`
 3.  **激活环境并安装依赖**: 激活虚拟环境后运行 `pip install -r requirements.txt`
 4.  **配置API**: 复制 `.env.example` 为 `.env` 并填入你的OKX API密钥。
@@ -160,4 +160,5 @@ This project is for educational purposes. Cryptocurrency trading involves signif
 
 </details>
 </div>
+
 
