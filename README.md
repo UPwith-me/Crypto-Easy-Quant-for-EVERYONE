@@ -1,6 +1,6 @@
 <div align="center">
 
-# OKX Volatility Hunter & Grid Trading Bot
+# Orion-Trader
 ### 妖币猎手 & 高频网格交易机器人
 
 **一个为捕捉市场极端波动而生的、拥有“猎手级”智能扫描引擎的OKX现货交易机器人。**  
@@ -160,3 +160,4 @@ This project is for educational purposes. Cryptocurrency trading involves signif
 
 </details>
 </div>
+
